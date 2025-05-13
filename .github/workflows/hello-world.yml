@@ -6,9 +6,18 @@ jobs:
   say_hello:
     runs-on: ubuntu-latest
 
-    steps:
+    steps:  # ⬅️ This needs to be indented under 'say_hello'
+      - name: Say Hello
+        run: echo "This is my first automation!"
+        
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Say Hello
-        run: echo "Hello, GitHub Actions!"
+      - name: Print Hello
+        run: echo "Hello from GitHub Actions!"
+
+      - name: Print Date
+        run: date
+
+      - name: List Files
+        run: ls -la
